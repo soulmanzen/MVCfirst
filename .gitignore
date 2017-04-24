@@ -2,3 +2,5 @@
 /.idea
 /MVCfirst.iml
 /logs/
+/vendor
+/application/config/database.php

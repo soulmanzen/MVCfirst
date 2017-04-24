@@ -38,6 +38,28 @@ class Route
             if (file_exists($model_path)) {
                 require_once $model_path;
             }
+
+//             тест модели
+//            $model = new $model_name;
+//            $model->where('title', 'asd')->where('id', [1,3])->where('id', 3, 'OR');
+//        var_dump($model->toSql());
+
+//            $model = new Portfolio();
+//            $portfolio = $model->find(2);
+//            $portfolio->setTitle('Title')->setYear(2020);
+//            echo "<pre>";
+//            var_dump($portfolio->save());
+//            die;
+
+        var_dump(
+            Session::setValue('key', 123),
+            Session::getValue('key'),
+            Session::existsKey('key'),
+            Session::deleteValue('key'),
+            Session::existsKey('key')
+        );
+        die;
+
             // подцепляем файл с классом контроллера
             $controller_file = strtolower($controller_name) . '.php';
             $controller_path = "../application/controllers/" . $controller_file;
